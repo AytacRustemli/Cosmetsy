@@ -1,0 +1,67 @@
+#popular{
+    padding: 20px;
+    .top{
+        text-align: center;
+        h2{
+            font-size: 42px;
+            margin-bottom: 0.9375rem;
+            font-family: "Crimson Text", serif;
+            font-weight: 500;
+        }
+        p{
+            font-size: 15px;
+            line-height: 1.8;
+            font-weight: 400;
+            width: 40%;
+            margin: auto;
+
+        }
+    }
+    .bottom{
+        margin-top: 30px;
+        .box{
+            cursor: pointer;
+            position: relative;
+            .image{
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+            &:hover{
+                .image{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            .text{
+                position: absolute;
+                top: 40%;
+                left: 40%;
+                h4{
+                    font-size: 1.5rem;
+                    margin-bottom: 0.9375rem;
+                    font-family: "Crimson Text", serif;
+                    font-weight: 400;
+                    color: white;
+                }
+                span{
+                    font-family: "DM Sans", sans-serif;;
+                    margin-left: -10px;
+                    color: white;
+                    font-size: .6875rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 0 0.375rem 0.3125rem;
+                    border-bottom: 1px solid;
+                    transition: 0.3s ease-in-out;
+                    &:hover{
+                        color: #EF4645;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+#davines{
+    padding: 20px;
+    img{
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        opacity: .2;
+        width: 200px;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

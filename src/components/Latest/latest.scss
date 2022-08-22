@@ -1,0 +1,85 @@
+#latest{
+    padding-top: 50px;
+    .top{
+        h2{
+            font-family: "DM Sans", sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .text{
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            span{
+                font-family: "DM Sans", sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+                margin-top: 0px;
+            }
+            i{
+                margin-left: 10px;
+                margin-top: 2px;
+            }
+            &:hover{
+                color: #F59249;
+            }
+        }
+    }
+    .bottom{
+        width: 100%;
+        margin-top: 20px;
+        .box {
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            width: 100%;
+            .image {
+                img{
+                    height: auto;
+                    width: 100%;
+                    transition: 0.3s ease-in-out;
+                    &:hover {
+                        opacity: 0.6;                     
+                    }
+                }
+            }
+            .text {
+                .box1 {
+                    display: block;
+                    margin-top: 15px;
+                    &.date{
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        color: #cfcccc;
+                        font-size: 10px;
+                    }
+                    &.title {
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        color: #F26A51;
+                        font-size: 10px;
+                        margin-left: 10px;
+                    }
+                    &.super{
+                        font-family: "Crimson Text", serif;;
+                        font-size: 20px;
+                        transition: 0.3s ease-in-out;
+                        &:hover{
+                            color: #EF4626;
+                        }
+                    }
+                    &.number {
+                        padding-bottom: 5px;
+                        font-weight: 600;
+                        .i{
+                            margin-right: 10px;
+                            color: grey;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

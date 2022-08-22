@@ -1,0 +1,36 @@
+#header{
+    padding: 20px;
+    .left{
+        .image{
+            margin-left: 20px;
+        }
+    }
+    .right{
+        margin: auto;
+        .main{
+            margin-top: 10px;
+            margin-right: 30px;
+            li{
+                margin-left: 70px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                font-family: 'Times New Roman', Times, serif;
+                &:hover{
+                    color: #F59249;
+                }
+            }
+        }
+        .icons{
+            margin : auto;
+            margin-top: 12px;
+            i{
+                margin-left: 15px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        }
+    }
+    
+    
+}
