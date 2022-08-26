@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Header/Header.scss'
+import ScrollToTop from "react-scroll-to-top";
 
 const Header = () => {
   return (
@@ -37,6 +38,7 @@ const Header = () => {
           </div>
         </div>
       </section>
+      <ScrollToTop smooth />
     </div>
   )
 }

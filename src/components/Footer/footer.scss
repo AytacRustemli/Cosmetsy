@@ -1,0 +1,90 @@
+#footer{
+    background-color: #FFFBF8;
+    padding-top: 50px;
+    margin: auto;
+    .top{
+        padding: 50px 0px 50px 0px;
+        h4{
+            font-size: 12px;
+            color: black;
+            padding-bottom: 0;
+            margin-bottom: 1.25rem;
+            border: 0;
+            font-family:'Times New Roman', Times, serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+        ul{
+            li{
+                font-size: 14px;
+                color: black;
+                transition: 0.3s ease-in-out;
+                padding-bottom: 0;
+                margin-bottom: 10px;
+                border: 0;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                letter-spacing: 0;
+                line-height: 1.2;
+                margin-top: 0;
+                cursor: pointer;
+                &:hover{
+                    color: #716F6E;
+                }
+            }
+            p{
+                font-size: 14px;
+                width: 100%;
+                color: black;
+                transition: 0.3s ease-in-out;
+                padding-bottom: 0;
+                margin-bottom: 10px;
+                border: 0;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-top: 0;
+            }
+            input{
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                width: 100%;
+                height: 2.5rem;
+                font-family: "DM Sans", sans-serif;
+                font-size: 13px;
+                font-weight: 400;
+                border-bottom: 1px solid black;
+                padding: 0 0.9375rem;
+                outline: none; 
+            }
+            i{
+                // margin-left: 10px;
+                margin-top: 12px;
+                cursor: pointer;
+            }
+        }
+    }
+    .bottom{
+        padding: 30px 0px 30px 0px;
+        .p{
+            p{
+                margin-top: 3px;
+                font-size: 14px;
+                font-family: "DM Sans", sans-serif;
+            }
+        }
+        .span{
+            span{
+                font-size: 13px;
+                transition: 0.3s ease-in-out;
+                font-family: "DM Sans", sans-serif;
+                margin-left: 10px;
+                cursor: pointer;
+                &:hover{
+                    color: #716F6E;
+                }
+            }
+        }
+    }
+}

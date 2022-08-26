@@ -1,5 +1,6 @@
 import React from 'react'
 import Botanical from '../components/Botanical/Botanical'
+import CountDown from '../components/CountDown/CountDown'
 import Cream from '../components/Cream/Cream'
 import Davines from '../components/Davines/Davines'
 import Featured from '../components/Featured/Featured'
@@ -17,7 +18,7 @@ const Home = () => {
       <SkinCare />
       <Featured />
       <Cream />
-      burda basqa sey var
+      <CountDown />
       <Latest />
       <Popular />
     </div>
