@@ -1,0 +1,29 @@
+#proin{
+    .deneme{
+        position: absolute;
+        background-color: white;
+        top: 85%;
+        left: 10%;
+        width: 80%;
+        .box{
+            padding: 50px 50px 0px 50px;
+            .title{
+                font-weight: 700;
+                line-height: 1.8em;
+                font-size: 15px;
+            }
+            .p{
+                line-height: 1.8em;
+                font-size: 15px;
+                font-family: "DM Sans", sans-serif;
+                font-weight: 500;
+                width: 75%;
+            }
+            h4{
+                font-size: 30px;
+                font-family: "DM Sans", sans-serif;
+                font-weight: 400;
+            }
+        }
+    }
+}
