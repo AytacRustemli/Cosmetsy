@@ -1,0 +1,28 @@
+#news{
+	ul {
+		list-style: none;
+	}
+	h1 {
+		animation: parallax 10s linear infinite;
+		background: {
+			image: url("https://k4j3j2s7.rocketcdn.me/cosmetsy/wp-content/uploads/2021/02/index-38.jpg");
+			clip: text;
+			size: 600px;
+		}
+		font-size: 150px;
+		line-height: 1.5;
+		text-align: center;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 3px #000;
+	}
+	
+	@keyframes parallax {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 500px -1000px;
+		}
+	}
+	
+}

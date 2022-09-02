@@ -1,15 +1,18 @@
 #botanical{
-    .image{
-        position: relative;
-        img{
-            width: 100%;
-            height: 85vh;
-        }
-    }
+    background-image: url("https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/index-38.jpg");
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+    position: relative;
+    opacity: 0.9;
     .text{
         position: absolute;
-        top: 20%;
-        left: 10%;
+        top: 7%;
+        left: 5%;
         h6{
             font-weight: 600;
             text-transform: uppercase;
@@ -19,14 +22,11 @@
         }
         h3{
             font-size: 50px;
-            // letter-spacing: 2px;
             color: white;
-            margin-bottom: 40px;
-            margin-top: 40px;
+            margin-top: 20px;
         }
         .skincare{
             font-size: 18px;
-            margin-bottom: 40px;
             margin-top: 30px;
             font-weight: 400;
             line-height: 1.8;

@@ -6,9 +6,6 @@ const Botanical = () => {
     <div>
         <section id="botanical">
             <div className="container">
-                <div className="image">
-                    <img src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/index-38.jpg" alt="" />
-                </div>
                 <div className="text">
                     <h6>Botanical Skincare</h6>
                     <h3>Skincare made with the <br /> world’s finest plant oils <br /> and absolutes.</h3>

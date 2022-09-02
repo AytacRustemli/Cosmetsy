@@ -1,0 +1,26 @@
+#etiam{
+    padding-top: 50px;
+    .text{
+        text-align: center;
+        h2{
+            font-size: 30px;
+            line-height: 1.2em;
+            font-weight: 400;
+            font-family: "Crimson Text", serif;
+            letter-spacing: 0;
+        }
+        p{
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1.2em;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+    }
+    .image{
+        margin-top: 40px;
+        img{
+            width: 80%;
+        }
+    }
+}

@@ -1,6 +1,21 @@
 #ut{
     padding: 50px 50px 0px 50px;
     .box{
-        width: 80%;
+        margin-top: 40px;
+        margin-left: 30px;
+        h2{
+            font-size: 60px;
+            font-family: "Crimson Text", serif;
+        }
+        p{
+            line-height: 1.8em;
+            font-size: 15px;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 500;
+            width: 85%;
+        }
+    }
+    .image{
+        margin-top: 60px;
     }
 }

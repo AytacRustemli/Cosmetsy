@@ -27,12 +27,16 @@ const Header = () => {
                     <Link to="/" style={{textDecoration: "none"}}>
                       <li>Home</li>
                     </Link>
-                    <Link to="/about-us" style={{textDecoration: "none"}}>
+                    <Link to="/about" style={{textDecoration: "none"}}>
                       <li>About Us</li>
                     </Link>
                     <li>Shop</li>
-                    <li>Categories</li>
-                    <li>Our News</li>
+                    <Link to="/categories" style={{textDecoration: "none"}}>
+                      <li>Categories</li>
+                    </Link>
+                    <Link to="/blog" style={{textDecoration: "none"}}>
+                      <li>Our News</li>
+                    </Link>
                     <li>Contact Us</li>
                   </ul>
                   <div className="icons d-flex">
