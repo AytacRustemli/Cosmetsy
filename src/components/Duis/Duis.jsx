@@ -85,7 +85,7 @@ const Duis = () => {
                   </div>
                 </div>
               </div>
-              <div className="boxes4">
+              <div className="boxes6">
                 <h4>POPULAR POSTS</h4>
                 <div className="d-flex">
                   <div className="image">
@@ -171,7 +171,15 @@ const Duis = () => {
                   sed, aliquam sed enim.
                 </p>
                 <p>
-                Duis cursus aliquet quam a aliquam. In sollicitudin elit augue, sed vulputate sapien vehicula et. Phasellus turpis sapien, sodales ut tortor vitae, bibendum molestie erat. Sed id posuere arcu, vitae vestibulum sapien. Sed nisi dui, lobortis at porttitor vel, semper in felis. Donec sit amet sodales ligula. Suspendisse sapien nunc, consequat a efficitur eget, fringilla a elit. Praesent aliquam, justo et mollis aliquam, tortor quam iaculis lorem, nec sagittis enim arcu in urna.
+                  Duis cursus aliquet quam a aliquam. In sollicitudin elit
+                  augue, sed vulputate sapien vehicula et. Phasellus turpis
+                  sapien, sodales ut tortor vitae, bibendum molestie erat. Sed
+                  id posuere arcu, vitae vestibulum sapien. Sed nisi dui,
+                  lobortis at porttitor vel, semper in felis. Donec sit amet
+                  sodales ligula. Suspendisse sapien nunc, consequat a efficitur
+                  eget, fringilla a elit. Praesent aliquam, justo et mollis
+                  aliquam, tortor quam iaculis lorem, nec sagittis enim arcu in
+                  urna.
                 </p>
                 <div className="text1">
                   <h5>
@@ -193,25 +201,25 @@ const Duis = () => {
                 </p>
                 <ul>
                   <li>
-                    <p>List Style</p>
+                    <span>List Style</span>
                   </li>
                   <li>
-                    <p>List Style</p>
+                    <span>List Style</span>
                   </li>
                   <li>
-                    <p>List Style</p>
+                    <span>List Style</span>
                   </li>
-                  <li style={{marginLeft: "20px"}}>
-                    <p>List Style</p>
+                  <li style={{ marginLeft: "20px" }}>
+                    <span>List Style</span>
                   </li>
-                  <li style={{marginLeft: "20px"}}>
-                    <p>List Style</p>
-                  </li>
-                  <li>
-                    <p>List Style</p>
+                  <li style={{ marginLeft: "20px" }}>
+                    <span>List Style</span>
                   </li>
                   <li>
-                    <p>List Style</p>
+                    <span>List Style</span>
+                  </li>
+                  <li>
+                    <span>List Style</span>
                   </li>
                 </ul>
                 <p>
@@ -223,7 +231,7 @@ const Duis = () => {
                   ultrices posuere cubilia curae; Fusce odio dolor, facilisis
                   sit amet nisl ut, rhoncus cursus mauris. Duis porta urna elit.
                 </p>
-                <h6>Ut at mi sed velit condimentum porta</h6>
+                <h4>Ut at mi sed velit condimentum porta</h4>
                 <p>
                   Vestibulum ac volutpat tellus. Etiam in est commodo,
                   pellentesque nunc sed, porttitor ligula. In in est varius,
@@ -242,22 +250,22 @@ const Duis = () => {
                 </p>
                 <ol>
                   <li>
-                    <p>List Style</p>
+                    <span>List Style</span>
                   </li>
                   <li>
-                    <p>List Style</p>
+                    <span>List Style</span>
                   </li>
                   <li>
-                    <p>List Style</p>
+                    <span>List Style</span>
+                  </li>
+                  <li style={{ marginLeft: "20px" }}>
+                    <span>List Style</span>
+                  </li>
+                  <li style={{ marginLeft: "20px" }}>
+                    <span>List Style</span>
                   </li>
                   <li>
-                    <p>List Style</p>
-                  </li>
-                  <li>
-                    <p>List Style</p>
-                  </li>
-                  <li>
-                    <p>List Style</p>
+                    <span>List Style</span>
                   </li>
                   <li>
                     <p>List Style</p>
@@ -301,9 +309,113 @@ const Duis = () => {
                   ut viverra eros. Vestibulum ut ligula quam.
                 </p>
                 <h6>
-                  3 THOUGHTS ON “BUT I MUST EXPLAIN TO YOU HOW ALL THIS MISTAKEN
-                  IDEA”
-                </h6>
+                  3 thoughts on “The 7 Best Bikini Trimmers to Get Ready for
+                  Swimsuit Season”
+                </h6>{" "}
+                <hr />
+              </div>
+              <div class="text2">
+                <div class="d-flex">
+                  <img
+                    src="https://secure.gravatar.com/avatar/3384f98a21c5dce2051e8f5a20928b05?s=96d=mmr=g"
+                    alt=""
+                  />
+                  <div class="text3">
+                    <h5>admin</h5>
+                    <span>February 20, 2021</span>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                      commodo viverra maecenas accumsan lacus vel facilisis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="text2">
+                <div class="d-flex">
+                  <img
+                    style={{ marginLeft: "30px" }}
+                    src="https://secure.gravatar.com/avatar/f628c5b49f26cd06cdc100a94fbe27d0?s=96d=mmr=g"
+                    alt=""
+                  />
+                  <div class="text3">
+                    <h5>Jeffrey T. Kelly</h5>
+                    <span>February 21, 2021</span>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                      commodo viverra maecenas accumsan lacus vel facilisis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="text2">
+                <div class="d-flex">
+                  <img
+                    src="https://secure.gravatar.com/avatar/f628c5b49f26cd06cdc100a94fbe27d0?s=96d=mmr=g"
+                    alt=""
+                  />
+                  <div class="text3">
+                    <h5>Elliot Alderson</h5>
+                    <span>February 21, 2021</span>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                      commodo viverra maecenas accumsan lacus vel facilisis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="boxes4">
+                <h4>LEAVE A REPLY</h4>
+                <p>
+                  Your email address will not be published. Required fields are
+                  marked *
+                </p>
+                <h6>Comment *</h6>
+                <textarea class="contact-input"></textarea>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="text5">
+                      <h6>Name *</h6>
+                      <form>
+                        <input class="contact-input" type="text" />
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="text4">
+                      <h6>Email *</h6>
+                      <form>
+                        <input class="contact-input" type="email" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="boxes5">
+                  <input
+                    id="wp-comment-cookies-consent"
+                    name="wp-comment-cookies-consent"
+                    type="checkbox"
+                    value="yes"
+                  />
+                  <label for="wp-comment-cookies-consent">
+                    Save my name, email, and website in this browser for the
+                    next time I comment.
+                  </label>
+                </div>
+                <div class="boxes6">
+                  <input
+                    name="submit"
+                    type="submit"
+                    id="submit"
+                    class="submit"
+                    value="Post Comment"
+                  />
+                </div>
               </div>
             </div>
           </div>
