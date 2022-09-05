@@ -44,7 +44,9 @@ const Header = () => {
                     </Link>
                   </ul>
                   <div className="icons d-flex">
-                    <i class="fa-solid fa-user"></i>
+                    <Link to='/account' style={{ textDecoration: "none" , marginTop : "-4px", color:"black"}}>
+                      <i class="fa-solid fa-user"></i>
+                    </Link>
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <div className="cart">
                       <i class="fa-solid fa-bag-shopping"></i>

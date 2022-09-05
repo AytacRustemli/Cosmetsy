@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import About from '../pages/About'
+import Auth from '../pages/Auth'
 import Blog from '../pages/Blog'
 import BlogDetail from '../pages/BlogDetail'
 import CartPage from '../pages/CartPage'
@@ -20,6 +21,7 @@ function MyRoutes() {
         <Route path='/contact' element={<ContactUs />}/>
         <Route path='/cart' element={<CartPage />}/>
         <Route path='/checkout' element={<CheckOutPage />}/>
+        <Route path='/account' element={<Auth />} />
     </Routes>
   )
 }
