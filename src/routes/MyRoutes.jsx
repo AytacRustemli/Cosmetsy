@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import NotFound from '../components/NotFound/NotFound'
 import About from '../pages/About'
 import Auth from '../pages/Auth'
 import Blog from '../pages/Blog'
@@ -22,6 +23,7 @@ function MyRoutes() {
         <Route path='/cart' element={<CartPage />}/>
         <Route path='/checkout' element={<CheckOutPage />}/>
         <Route path='/account' element={<Auth />} />
+        <Route path='*' element={<NotFound />} />
     </Routes>
   )
 }
