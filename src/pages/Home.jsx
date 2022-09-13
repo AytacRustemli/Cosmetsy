@@ -4,8 +4,8 @@ import CountDown from '../components/CountDown/CountDown'
 import Cream from '../components/Cream/Cream'
 import Davines from '../components/Davines/Davines'
 import Featured from '../components/Featured/Featured'
+import HomePopular from '../components/HomePopular/HomePopular'
 import Latest from '../components/Latest/Latest'
-import Popular from '../components/Popular/Popular'
 import Product from '../components/Products/Product'
 import SkinCare from '../components/SkinCare/SkinCare'
 
@@ -20,7 +20,7 @@ const Home = () => {
       <Cream />
       <CountDown />
       <Latest />
-      <Popular />
+      <HomePopular />
     </div>
   )
 }

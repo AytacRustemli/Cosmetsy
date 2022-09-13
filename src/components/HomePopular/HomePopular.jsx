@@ -1,10 +1,10 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import '../Popular/popular.scss'
+import './homePopular.scss'
 import { getCategoryAction } from './../../redux/Actions/CategoryActions';
 
-const Popular = () => {
+const HomePopular = () => {
     const { categories } = useSelector((state) => state.category)
     const dispatch = useDispatch();
     
@@ -24,8 +24,8 @@ const Popular = () => {
                     <div className="row">
                         {
                             categories &&
-                            categories.map((cat) => (
-                                <div className="col-lg-3 my-4" key={cat.id}>
+                            categories.filter(x=>x.isPopular).map((cat) => (
+                                <div className="col-lg-3 my-2" key={cat.id}>
                                     <div className="box">
                                         <div className="image">
                                             <img src={cat.photoURL} alt="" />
@@ -46,4 +46,4 @@ const Popular = () => {
   )
 }
 
-export default Popular
+export default HomePopular

@@ -75,7 +75,7 @@
                         }
                         &.super{
                             font-family: "DM Sans", sans-serif;
-                            font-size: 16px;
+                            font-size: 14px;
                             font-weight: 600;
                             transition: 0.3s ease-in-out;
                             &:hover{
@@ -93,14 +93,6 @@
                 }
                 &:hover {
                     .image{
-                        background-image: url("https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/pr-13-2.jpg");
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover;
-                        img{
-                            opacity: 0;
-                            visibility: hidden;
-                        }
                         .icons{
                             .icon{
                                 opacity: 1;

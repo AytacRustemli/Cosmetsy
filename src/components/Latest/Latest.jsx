@@ -1,7 +1,17 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import '../Latest/latest.scss'
+import { getBlogAction } from './../../redux/Actions/BlogAction';
 
 const Latest = () => {
+    const {blogs} = useSelector((state) => state.blog)
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
+        dispatch(getBlogAction())
+    }, [])
+
   return (
     <div>
         <section id="latest">
@@ -17,51 +27,26 @@ const Latest = () => {
                 </div>
                 <div className="bottom">
                     <div className="row align-items-center">
-                        <div className="col-lg-4">
-                            <div className="box">
-                                <div className="image">
-                                    <img src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/index-47-370x250.jpg" alt="" />
-                                </div>
-                                <div className="text">
-                                    <div className="d-flex">
-                                        <span className="box1 date">7 FEB 2021</span>
-                                        <span className="box1 title">SKINCARE</span>
+                        {
+                            blogs &&
+                            blogs.map((blog) =>(
+                                <div className="col-lg-4">
+                                    <div className="box">
+                                        <div className="image">
+                                            <img src={blog.picture} alt="" />
+                                        </div>
+                                        <div className="text">
+                                            <div className="d-flex">
+                                                <span className="box1 date">7 FEB 2021</span>
+                                                <span className="box1 title">{blog.style}</span>
+                                            </div>
+                                            <span className='box1 super'>{blog.name}</span>
+                                            <span className='box1 number'><i className='i'>By</i>Sinan</span>
+                                        </div>
                                     </div>
-                                    <span className='box1 super'>The 7 Best Bikini Trimmers to Get Ready for Swimsuit Season</span>
-                                    <span className='box1 number'><i className='i'>By</i>Sinan</span>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="box">
-                                <div className="image">
-                                    <img src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/index-46-370x250.jpg" alt="" />
-                                </div>
-                                <div className="text">
-                                    <div className="d-flex">
-                                        <span className="box1 date">7 FEB 2021</span>
-                                        <span className="box1 title">SKINCARE</span>
-                                    </div>
-                                    <span className='box1 super'>The 7 Best Bikini Trimmers to Get Ready for Swimsuit Season</span>
-                                    <span className='box1 number'><i className='i'>By</i>Sinan</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="box">
-                                <div className="image">
-                                    <img src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/index-45-370x250.jpg" alt="" />
-                                </div>
-                                <div className="text">
-                                    <div className="d-flex">
-                                        <span className="box1 date">7 FEB 2021</span>
-                                        <span className="box1 title">SKINCARE</span>
-                                    </div>
-                                    <span className='box1 super'>The 7 Best Bikini Trimmers to Get Ready for Swimsuit Season</span>
-                                    <span className='box1 number'><i className='i'>By</i>Sinan</span>
-                                </div>
-                            </div>
-                        </div>
+                            ))
+                        }
                     </div>    
                 </div>
                 <hr />

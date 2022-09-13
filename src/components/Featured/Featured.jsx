@@ -1,19 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../Featured/featured.scss'
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/scss/navigation';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import { Navigation, Scrollbar, A11y } from 'swiper';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProductsAction } from '../../redux/Actions/ProductActions';
+import { FILE_PATH } from '../../api/config';
 
 const Featured = () => {
+    const { products } = useSelector((state) => state.products)
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getProductsAction())
+    }, [dispatch])
+
+
   return (
     <div>
         <section id="featured">
             <div className="container">
                 <div className="top">
                     <div className="d-flex justify-content-between">
-                        <h2>Featured Products</h2>
+                        <h2>Discounted Products</h2>
                         <div className="text d-flex">
                             <span>View All Products</span>
                             <i class="fa-solid fa-arrow-right"></i>
@@ -28,29 +39,34 @@ const Featured = () => {
                         navigation
                         scrollbar={{ draggable: false }}
                     >
-                        <SwiperSlide>
-                            <div className="containerr">
-                                <div className="row align-items-center">
-                                    <div className="col-lg-12">
-                                        <div className="box">
-                                            <div className="image">
-                                                <img src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/pr-13-1-570x670.jpg" alt="" />
-                                                <div className="icons">
-                                                    <i class="fa-solid fa-eye icon"></i><br />
-                                                    <i class="fa-solid fa-heart icon"></i><br />
-                                                    <i class="fa-solid fa-bag-shopping icon"></i>
+                        {
+                            products &&
+                            products.filter(x=>x.isSale).map((product) => (
+                                <SwiperSlide>
+                                    <div className="containerr" key={product.id}>
+                                        <div className="row align-items-center">
+                                            <div className="col-lg-12">
+                                                <div className="box">
+                                                    <div className="image">
+                                                        <img src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
+                                                        <div className="icons">
+                                                            <i class="fa-solid fa-eye icon"></i><br />
+                                                            <i class="fa-solid fa-heart icon"></i><br />
+                                                            <i class="fa-solid fa-bag-shopping icon"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div className="text">
+                                                        <span className="box1 title">{product.categoryName}</span>
+                                                        <span className='box1 super'>{product.name}</span>
+                                                        <span className='box1 number'><del className='del'>£{product.price}.00</del>£{product.salePrice}.00</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="text">
-                                                <span className="box1 title">SKINCARE</span>
-                                                <span className='box1 super'>Superfood Glow Priming Moisturiser</span>
-                                                <span className='box1 number'><del className='del'>₼ 50.00</del>49.00 ₼</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
+                                </SwiperSlide>
+                            ))
+                        }
                     </Swiper>
                 </div>
             </div> <hr style={{marginLeft: "50px"}} />
