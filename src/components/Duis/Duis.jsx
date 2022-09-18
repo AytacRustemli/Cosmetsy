@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { BASE_URL } from "../../api/config";
 import "./duis.scss";
 
 const Duis = () => {
+
+  const {id} = useParams();
+  const [products,setProducts] = useState([]);
+
+
+  const getBlogs = async () => {
+    await fetch(BASE_URL + "blog/getbyid/" + id)
+      .then((res) => res.json())
+      .then((data) => setProducts(data.message));
+  };
+  useEffect(() => {
+    getBlogs();
+  }, []);
+
   return (
     <div>
       <section id="duis">
@@ -132,7 +149,7 @@ const Duis = () => {
             <div className="col-lg-9 col-12">
               <div className="image">
                 <img
-                  src="https://k4j3j2s7.rocketcdn.me/cosmetsy/wp-content/uploads/2021/02/index-47.jpg"
+                  src={products.picture}
                   alt=""
                 />
               </div>
@@ -140,13 +157,12 @@ const Duis = () => {
                 <div className="d-flex">
                   <p className="btn1">FEBRUARY 7, 2021</p>
                   <p className="btn1" style={{ color: "#F26A51" }}>
-                    {" "}
-                    - LIFESTYLE -{" "}
+                    - {products.style} -
                   </p>
-                  <p className="btn1">ENVATO, ONLINE</p>
+                  <p className="btn1">{products.tags}</p>
                 </div>
                 <h2>
-                  The 7 Best Bikini Trimmers to Get Ready for Swimsuit Season
+                  {products.name}
                 </h2>
                 <p>
                   Pellentesque feugiat, sem id interdum molestie, libero nibh

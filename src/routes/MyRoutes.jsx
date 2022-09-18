@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import NotFound from '../components/NotFound/NotFound'
+import ProductDetail from '../components/ProductDetail/ProductDetail'
 import About from '../pages/About'
 import Auth from '../pages/Auth'
 import Blog from '../pages/Blog'
@@ -18,7 +19,8 @@ function MyRoutes() {
         <Route path='/about' element={<About/>}/>
         <Route path='/categories' element={<Categories />}/>
         <Route path='/blog' element={<Blog />} />
-        <Route path='/blogdetail' element={<BlogDetail/>}/>
+        <Route path='/blogdetail/:id' element={<BlogDetail/>}/>
+        <Route path='/product/:id' element={<ProductDetail/>}/>
         <Route path='/contact' element={<ContactUs />}/>
         <Route path='/cart' element={<CartPage />}/>
         <Route path='/checkout' element={<CheckOutPage />}/>

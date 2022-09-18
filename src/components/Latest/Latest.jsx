@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 import '../Latest/latest.scss'
 import { getBlogAction } from './../../redux/Actions/BlogAction';
 
@@ -32,9 +33,11 @@ const Latest = () => {
                             blogs.map((blog) =>(
                                 <div className="col-lg-4">
                                     <div className="box">
-                                        <div className="image">
-                                            <img src={blog.picture} alt="" />
-                                        </div>
+                                        <Link to={'/blogdetail/' + blog.id}>
+                                            <div className="image">
+                                                <img src={blog.picture} alt="" />
+                                            </div>
+                                        </Link>
                                         <div className="text">
                                             <div className="d-flex">
                                                 <span className="box1 date">7 FEB 2021</span>
