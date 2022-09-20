@@ -1,7 +1,6 @@
 import { ADD_TO_CART, GET_CART_ITEMS, REMOVE_ALL_CART } from "../Constants/CartConstants";
 
 
-
 export const CartReducer = (state = { cartItems: [] }, action) => {
     switch (action.type) {
         case ADD_TO_CART:

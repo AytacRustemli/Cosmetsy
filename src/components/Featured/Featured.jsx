@@ -8,6 +8,7 @@ import { Navigation, Scrollbar, A11y } from 'swiper';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductsAction } from '../../redux/Actions/ProductActions';
 import { FILE_PATH } from '../../api/config';
+import { Link } from 'react-router-dom';
 
 const Featured = () => {
     const { products } = useSelector((state) => state.products)
@@ -48,7 +49,9 @@ const Featured = () => {
                                             <div className="col-lg-12">
                                                 <div className="box">
                                                     <div className="image">
-                                                        <img src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
+                                                        <Link to={'/product/' + product.id}>
+                                                            <img src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
+                                                        </Link>
                                                         <div className="icons">
                                                             <i class="fa-solid fa-eye icon"></i><br />
                                                             <i class="fa-solid fa-heart icon"></i><br />

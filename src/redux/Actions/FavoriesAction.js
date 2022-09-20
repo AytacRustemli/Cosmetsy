@@ -3,7 +3,7 @@ import { ADD_TO_FAVORIES, GET_FAVORIES_ITEMS, REMOVE_FAVORIES_ITEMS } from './..
 
 
 export const addToFavoriesAction = (id,quantity=1) => async (dispach, getState) => {
-    const data = await (await fetch(`${BASE_URL}/getbyid/${id}`)).json()
+    const data = await (await fetch(`${BASE_URL}product/getbyid/${id}`)).json()
     const product = {
         id: data.message.id,
         name: data.message.name,

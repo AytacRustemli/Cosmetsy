@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Header/Header.scss";
 import ScrollToTop from "react-scroll-to-top";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SideBar from "../sidebar";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUserAction } from "../../redux/Actions/UserAction";
+import { FILE_PATH } from "../../api/config";
 
 const Header = () => {
+  const { userInfo } = useSelector((state) => state.user);
+  const { cartItems } = useSelector((state) => state.cart);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const logOut = () =>{
+    dispatch(logoutUserAction())
+    navigate("/")
+  }
+
+  const countTotal = () => {
+    var price = 0;
+    cartItems.map((cart) => {
+      price += cart.price * cart.quantity;
+    });
+    setTotalPrice(price);
+  };
+  
+
+  useEffect(() => {
+    countTotal();
+    // dispach(getUserAction());
+  }, [totalPrice, cartItems]);
+
   return (
     <div>
       <section id="header">
@@ -44,9 +72,18 @@ const Header = () => {
                     </Link>
                   </ul>
                   <div className="icons d-flex">
-                    <Link to='/account' style={{ textDecoration: "none" , marginTop : "-4px", color:"black"}}>
-                      <i class="fa-solid fa-user"></i>
-                    </Link>
+                    {
+                      userInfo.length === 0 ? (
+                        <Link to='/account' style={{ textDecoration: "none" , marginTop : "-4px", color:"black"}}>
+                          <i class="fa-solid fa-user"></i>
+                        </Link>
+                      ) : 
+                      (
+                        <Link to='/finish' style={{ textDecoration: "none" , marginTop : "-4px", color:"black"}}>
+                          <i class="fa-solid fa-user"></i>
+                        </Link>
+                      )
+                    }
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <div className="cart">
                       <i class="fa-solid fa-bag-shopping"></i>
@@ -57,26 +94,38 @@ const Header = () => {
                         <hr />
                         <div className="center">
                           <div className="row">
-                            <div className="col-lg-4">
+                            {
+                              cartItems.length > 0 
+                              ? cartItems.map((product) => (
+                                <>
+                                  <div className="col-lg-4 my-2">
                               <img
                                 width="100%"
-                                src="https://cdn.pixabay.com/photo/2022/02/12/19/58/cat-7009836_960_720.jpg"
+                                src={`${FILE_PATH}${product.img}`}
                                 alt=""
                               />
                             </div>
-                            <div className="col-lg-8">
+                            <div className="col-lg-8 my-2">
                               <div className="row align-items-center justify-content-between">
                                 <div className="col-lg-10">
                                   <h6 className="samsung">
-                                    Samsung C49J89: £875, Debenhams Plus
+                                    {product.name}
                                   </h6>
-                                  <p className="price">$255.00</p>
+                                  <div className="d-flex justify-content-between">
+                                    <p className="price">{product.price} £</p>
+                                    <p>Quantity : {product.quantity}</p>
+                                  </div>
+                                  
                                 </div>
                                 <div className="col-lg-2">
                                   <i class="fa-solid fa-x"></i>
                                 </div>
                               </div>
                             </div>
+                                </>
+                              )) : ("bosdur sebet")
+                            }
+                            
                           </div>
                         </div>
                         <hr />
@@ -87,7 +136,7 @@ const Header = () => {
                                 <span className="total">Subtotal</span>
                               </div>
                               <div className="col-lg-6">
-                                <span className="money">$255.00</span>
+                                <span className="money">£{totalPrice}</span>
                               </div>
                             </div>
                           </div>

@@ -47,7 +47,7 @@ const CartTotal = () => {
             if (cartItems.length > 0) {
               dispach(CheckOutAction(userInfo.id));
               dispach(removeAllCartAction());
-              navigate("/finish");
+              navigate("/checkout");
             }
             else {
               Swal.fire("Səbətiniz boşdur.");
@@ -120,13 +120,17 @@ const CartTotal = () => {
                       </td>
                     </tr>
                     ))
-                  : "Mehsul yoxdur"}
+                  : (
+                    <>
+                      <p>Your cart is currently empty.</p>
+                      <div className="deneme">
+                        <span className="shop">RETURN TO SHOP</span>
+                      </div>
+                    </>
+                  )}
                   
                 </tbody>
               </table>
-               <div className="deneme">
-                   <span className='shop'>SHOP NOW</span>
-                </div>
             </div>
             <div className="col-lg-4">
                 <div className="collaterals">
@@ -136,18 +140,18 @@ const CartTotal = () => {
                             <tbody>
                                 <tr>
                                     <th>SubTotal</th>      
-                                    <td>£147.00</td>
+                                    <td>£{totalPrice}</td>
                                 </tr>
                                 <tr>
                                     <th>Total</th>
-                                    <td style={{fontWeight:"700"}}>£147.00</td>
+                                    <td style={{fontWeight:"700"}}>£{totalPrice}</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div className="deneme">
-                            <Link to='/checkout' style={{textDecoration:"none"}}>
-                            <span className='shop'>Proceed to checkout</span>
-                            </Link>
+                            
+                            <span className='shop' onClick={() => addOrder()}>Proceed to checkout</span>
+                            
                         </div>
                     </div>
                 </div>

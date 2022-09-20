@@ -11,13 +11,20 @@ import { FILE_PATH } from '../../api/config';
 import { Link } from 'react-router-dom';
 import { addToCartAction } from '../../redux/Actions/CartAction';
 import { addToFavoriesAction } from './../../redux/Actions/FavoriesAction';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Product() {
+    // const notify = (productName) => toast(`${productName} sebete elave olundu.`)
     const { products } = useSelector((state) => state.products)
     const  {cartItems}  = useSelector((state) => state.cart)
     const  {favoriesItems}  = useSelector((state) => state.favories)
     const dispatch = useDispatch();
+
+    
+    const notify = () => toast(<Link to="/cart" style={{textDecoration: "none"}}>"Product added to cart !"</Link>);
+    const notifyF = () => toast(<Link to="/wishlist" style={{textDecoration: "none"}}>"Product added to wishlist !"</Link>);
 
     const addToCartHadler = (id,name) => {
         var myCart = cartItems.find(e => e.id === id)
@@ -71,16 +78,18 @@ function Product() {
                                         <div className="row align-items-center">
                                             <div className="col-lg-12">
                                                 <div className="box">
-                                                    <Link to={'/product/' + product.id}>
+                                                    
                                                     <div className="image">
-                                                        <img src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
+                                                        <Link to={'/product/' + product.id}>
+                                                            <img src={`${FILE_PATH}${product.coverPhoto}`} alt="" />
+                                                        </Link>
                                                         <div className="icons">
                                                             <i class="fa-solid fa-eye icon"></i><br />
-                                                            <i class="fa-solid fa-heart icon"  onClick={() => addToCartHandler(product.id, product.name)}></i><br />
-                                                            <i class="fa-solid fa-bag-shopping icon" onClick={() => addToCartHadler(product.id, product.name)}></i>
+                                                            <i class="fa-solid fa-heart icon"  onClick={() => {addToCartHandler(product.id, product.name); notifyF(); }}></i><br />
+                                                            <i class="fa-solid fa-bag-shopping icon" onClick={() => {addToCartHadler(product.id, product.name); notify();}}></i>
                                                         </div>
                                                     </div>
-                                                    </Link>
+                                                    
                                                     <div className="text">
                                                         <span className="box1 title">{product.categoryName}</span>
                                                         <span className='box1 super'>{product.name}</span>
@@ -97,6 +106,19 @@ function Product() {
                     </Swiper>
                 </div> <hr />
             </div> 
+            <ToastContainer
+                limit={3}
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
+            <ToastContainer />
         </section>
     </div>
   )
