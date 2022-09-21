@@ -1,5 +1,6 @@
 import {combineReducers, createStore, applyMiddleware} from '@reduxjs/toolkit'
 import { BlogReducer } from './Reducers/BlogReducer'
+import { BrandReducer } from './Reducers/BrandReducer'
 import { CartReducer } from './Reducers/CartReducer'
 import { CategoryReducer } from './Reducers/CategoryReducer'
 import { addCheckOutReducer } from './Reducers/CheckOutReducer'
@@ -16,7 +17,8 @@ const reducer = combineReducers({
     user: UserReducer,
     cart: CartReducer,
     checkout: addCheckOutReducer,
-    favories: FavoriesReducer
+    favories: FavoriesReducer,
+    brand : BrandReducer
 })
 
 const userInfoFromLocalStorage = localStorage.getItem("userInfo")
@@ -36,7 +38,8 @@ const initialState = {
     user: {userInfo: userInfoFromLocalStorage},
     cart:{cartItems: cartItemFromLocalStorage},
     checkout: {checkOut: []},
-    favories:{favoriesItems: favoriesItemFromLocalStorage}
+    favories:{favoriesItems: favoriesItemFromLocalStorage},
+    brand : []
 }
 
 const middleware = [thunk]

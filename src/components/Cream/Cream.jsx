@@ -9,7 +9,7 @@ const Cream = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <Link to='/product/33' style={{textDecoration : "none", color:"black"}}>
+              <Link to='/product/1034' style={{textDecoration : "none", color:"black"}}>
                 <div className="box">
                   <div className="image">
                     <img src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/index-16.jpg" alt="" />
@@ -24,7 +24,7 @@ const Cream = () => {
               </Link>
             </div>
             <div className="col-lg-6">
-              <Link to='/product/1030' style={{textDecoration : "none", color:"black"}}>
+              <Link to='/product/1035' style={{textDecoration : "none", color:"black"}}>
                 <div className="box">
                   <div className="image">
                     <img src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/index-17.jpg" alt="" />
