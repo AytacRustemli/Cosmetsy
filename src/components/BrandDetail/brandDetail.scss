@@ -1,0 +1,132 @@
+#branddetail {
+    .top {
+      background-image: url("https://cdn.pixabay.com/photo/2020/01/05/20/06/lipstick-4743984_960_720.jpg");
+      width: 100%;
+      height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 50px;
+      position: relative;
+      opacity: 0.6;
+      background-color: #fae4e1;
+      .box {
+        padding-top: 100px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        .image {
+          width: 13%;
+          margin: auto;
+          p {
+            color: #ee2d7a;
+            font-size: 16px;
+            opacity: 1;
+            margin-top: 20px;
+          }
+        }
+        .bottom {
+          width: 60%;
+          margin: auto;
+          h1 {
+            color: black;
+            font-size: 60px;
+          }
+          p {
+            margin-top: 40px;
+            color: black;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .bottom {
+      .box {
+        // padding: 35px 10px ;
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+        cursor: pointer;
+        // width: 100%;
+        .image {
+          position: relative;
+          img {
+            height: auto;
+            max-width: 100%;
+          }
+          .icons {
+            position: absolute;
+            top: 10%;
+            right: 0%;
+            .icon {
+              background-color: white;
+              padding: 10px;
+              margin-bottom: 9px;
+              border: 1px solid rgb(214, 213, 213);
+              opacity: 0;
+              visibility: hidden;
+              transform: translateX(30px);
+              transition: 0.3s ease-in-out;
+              color: black;
+              &:hover {
+                background-color: #ef4626;
+                color: white;
+              }
+            }
+          }
+        }
+        .text {
+          .box1 {
+            display: block;
+            margin-top: 15px;
+            &.title {
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              color: #f26a51;
+              font-size: 10px;
+            }
+            &.super {
+              font-family: "DM Sans", sans-serif;
+              font-size: 14px;
+              font-weight: 600;
+              transition: 0.3s ease-in-out;
+              &:hover {
+                color: #ef4626;
+              }
+            }
+            &.number {
+              padding-bottom: 5px;
+              .del {
+                margin-right: 10px;
+                color: grey;
+              }
+            }
+          }
+        }
+        &:hover {
+          .image {
+            // background-image: url("https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/pr-13-2.jpg");
+            // background-repeat: no-repeat;
+            // background-position: center;
+            // background-size: cover;
+            // img{
+            //     opacity: 0;
+            //     visibility: hidden;
+            // }
+            .icons {
+              .icon {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

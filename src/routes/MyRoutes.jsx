@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import CategoryDetail from '../components/CategoryDetail/CategoryDetail'
 import Finish from '../components/Finish/Finish'
 import NotFound from '../components/NotFound/NotFound'
 import ProductDetail from '../components/ProductDetail/ProductDetail'
@@ -14,6 +15,7 @@ import ContactUs from '../pages/ContactUs'
 import Home from '../pages/Home'
 import ShopPage from '../pages/ShopPage'
 import WishlistPage from '../pages/WishlistPage'
+import BrandDetail from './../components/BrandDetail/BrandDetail';
 
 function MyRoutes() {
   return (
@@ -24,6 +26,8 @@ function MyRoutes() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/blogdetail/:id' element={<BlogDetail/>}/>
         <Route path='/product/:id' element={<ProductDetail/>}/>
+        <Route path='/category/:id' element={<CategoryDetail />}/>
+        <Route path='/brand/:id' element={<BrandDetail />}/>
         <Route path='/contact' element={<ContactUs />}/>
         <Route path='/cart' element={<CartPage />}/>
         <Route path='/wishlist' element={<WishlistPage />}/>

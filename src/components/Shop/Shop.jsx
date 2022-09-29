@@ -98,7 +98,9 @@ const Shop = () => {
                 {categories &&
                   categories.map((cat) => (
                     <div key={cat.id}>
-                      <p>{cat.name}</p>
+                      <Link to={'/category/' + cat.id} style={{textDecoration:"none",color: "black"}}>
+                        <p>{cat.name}</p>
+                      </Link>
                     </div>
                   ))}
               </div>
@@ -108,9 +110,10 @@ const Shop = () => {
                   brands.map((brand) => (
                     <div className="smallBox d-flex  justify-content-center">
                       <div className="col-lg-8">
-                        <p>{brand.name}</p>
+                        <Link to={'/brand/' + brand.id} style={{textDecoration:"none",color:"black"}}>
+                          <p>{brand.name}</p>
+                        </Link>
                       </div>
-                      <div className="col-lg-4">(35)</div>
                     </div>
                   ))}
               </div>

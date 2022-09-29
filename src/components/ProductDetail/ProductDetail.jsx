@@ -53,7 +53,6 @@ const ProductDetail = () => {
         "Product added to wishlist !"
       </Link>
     );
-
   const addToCartHadler = (id, name) => {
     var myCart = cartItems.find((e) => e.id === id);
     if (myCart) {
