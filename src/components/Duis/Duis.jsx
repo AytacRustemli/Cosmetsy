@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 import { BASE_URL } from "../../api/config";
+import { getBlogAction } from "../../redux/Actions/BlogAction";
 import "./duis.scss";
 
 const Duis = () => {
-
-  const {id} = useParams();
-  const [products,setProducts] = useState([]);
-
+  const { id } = useParams();
+  const [products, setProducts] = useState([]);
+  const { blogs } = useSelector((state) => state.blog);
+  const dispatch = useDispatch();
 
   const getBlogs = async () => {
     await fetch(BASE_URL + "blog/getbyid/" + id)
@@ -16,6 +18,7 @@ const Duis = () => {
       .then((data) => setProducts(data.message));
   };
   useEffect(() => {
+    dispatch(getBlogAction());
     getBlogs();
   }, []);
 
@@ -67,83 +70,28 @@ const Duis = () => {
                   />
                 </div>
               </div>
-              <div className="boxes3">
-                <h4>TAGS</h4>
-                <div className="row">
-                  <div className="col-lg-4">
-                    <div className="box1">
-                      <p>beauty</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-4" style={{ marginLeft: "-10px" }}>
-                    <div className="box1">
-                      <p>cosmetic</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-4">
-                    <div className="box1">
-                      <p>envato</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-4" style={{ marginLeft: "-7px" }}>
-                    <div className="box1">
-                      <p>klbtheme</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-4" style={{ marginLeft: "7px" }}>
-                    <div className="box1">
-                      <p>online</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-4">
-                    <div className="box1">
-                      <p>shop</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div className="boxes6">
                 <h4>POPULAR POSTS</h4>
-                <div className="d-flex">
-                  <div className="image">
-                    <img
-                      src="https://k4j3j2s7.rocketcdn.me/cosmetsy/wp-content/uploads/2021/02/index-47-150x150.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="text">
-                    <h3>
-                      The 7 Best Bikini Trimmers to Get Ready for Swimsuit
-                      Season
-                    </h3>
-                  </div>
-                </div>
-                <div className="d-flex" style={{ marginTop: "20px" }}>
-                  <div className="image">
-                    <img
-                      src="https://k4j3j2s7.rocketcdn.me/cosmetsy/wp-content/uploads/2021/02/index-46-150x150.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="text">
-                    <h3>
-                      But I must explain to you how all this mistaken idea
-                    </h3>
-                  </div>
-                </div>
-                <div className="d-flex" style={{ marginTop: "20px" }}>
-                  <div className="image">
-                    <img
-                      src="https://k4j3j2s7.rocketcdn.me/cosmetsy/wp-content/uploads/2021/02/index-48-150x150.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="text">
-                    <h3>
-                      On the other hand we provide denounce with righteous
-                    </h3>
-                  </div>
-                </div>
+                {blogs &&
+                  blogs.map((blog) => (
+                    <div
+                      key={blog.id}
+                      className="d-flex"
+                      style={{ marginTop: "10px" }}
+                    >
+                      <div className="image">
+                        <img src={blog.picture} alt="" />
+                      </div>
+                      <div className="text">
+                        <Link
+                          to={"/blogdetail/" + blog.id} target={"_blank"}
+                          style={{ textDecoration: "none", color: "black" }}
+                        >
+                          <h3>{blog.name}</h3>
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
               </div>
             </div>
             <div className="col-lg-9 col-12">
@@ -324,114 +272,6 @@ const Duis = () => {
                   consectetur vulputate. Pellentesque id pellentesque nulla. Sed
                   ut viverra eros. Vestibulum ut ligula quam.
                 </p>
-                <h6>
-                  3 thoughts on “The 7 Best Bikini Trimmers to Get Ready for
-                  Swimsuit Season”
-                </h6>{" "}
-                <hr />
-              </div>
-              <div class="text2">
-                <div class="d-flex">
-                  <img
-                    src="https://secure.gravatar.com/avatar/3384f98a21c5dce2051e8f5a20928b05?s=96d=mmr=g"
-                    alt=""
-                  />
-                  <div class="text3">
-                    <h5>admin</h5>
-                    <span>February 20, 2021</span>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                      commodo viverra maecenas accumsan lacus vel facilisis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="text2">
-                <div class="d-flex">
-                  <img
-                    style={{ marginLeft: "30px" }}
-                    src="https://secure.gravatar.com/avatar/f628c5b49f26cd06cdc100a94fbe27d0?s=96d=mmr=g"
-                    alt=""
-                  />
-                  <div class="text3">
-                    <h5>Jeffrey T. Kelly</h5>
-                    <span>February 21, 2021</span>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                      commodo viverra maecenas accumsan lacus vel facilisis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="text2">
-                <div class="d-flex">
-                  <img
-                    src="https://secure.gravatar.com/avatar/f628c5b49f26cd06cdc100a94fbe27d0?s=96d=mmr=g"
-                    alt=""
-                  />
-                  <div class="text3">
-                    <h5>Elliot Alderson</h5>
-                    <span>February 21, 2021</span>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                      commodo viverra maecenas accumsan lacus vel facilisis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="boxes4">
-                <h4>LEAVE A REPLY</h4>
-                <p>
-                  Your email address will not be published. Required fields are
-                  marked *
-                </p>
-                <h6>Comment *</h6>
-                <textarea class="contact-input"></textarea>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="text5">
-                      <h6>Name *</h6>
-                      <form>
-                        <input class="contact-input" type="text" />
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="text4">
-                      <h6>Email *</h6>
-                      <form>
-                        <input class="contact-input" type="email" />
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <div class="boxes5">
-                  <input
-                    id="wp-comment-cookies-consent"
-                    name="wp-comment-cookies-consent"
-                    type="checkbox"
-                    value="yes"
-                  />
-                  <label for="wp-comment-cookies-consent">
-                    Save my name, email, and website in this browser for the
-                    next time I comment.
-                  </label>
-                </div>
-                <div class="boxes6">
-                  <input
-                    name="submit"
-                    type="submit"
-                    id="submit"
-                    class="submit"
-                    value="Post Comment"
-                  />
-                </div>
               </div>
             </div>
           </div>

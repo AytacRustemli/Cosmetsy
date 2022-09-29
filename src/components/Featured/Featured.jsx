@@ -26,10 +26,12 @@ const Featured = () => {
                 <div className="top">
                     <div className="d-flex justify-content-between">
                         <h2>Discounted Products</h2>
-                        <div className="text d-flex">
-                            <span>View All Products</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                        <Link to='/shop' style={{textDecoration:"none",color:"black"}}>
+                            <div className="text d-flex">
+                                <span>View All Products</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </Link>
                     </div>
                 </div>
                 <div className="bottom">
@@ -71,8 +73,8 @@ const Featured = () => {
                             ))
                         }
                     </Swiper>
-                </div>
-            </div> <hr style={{marginLeft: "50px"}} />
+                </div>  <hr />
+            </div>
         </section>
     </div>
   )

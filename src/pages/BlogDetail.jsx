@@ -4,7 +4,7 @@ import Duis from '../components/Duis/Duis'
 const BlogDetail = () => {
   return (
     <div>
-        <Duis />
+      <Duis />
     </div>
   )
 }

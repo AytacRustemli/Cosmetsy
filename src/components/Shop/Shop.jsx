@@ -1,5 +1,4 @@
 import { Slider, Typography } from "@mui/material";
-
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -14,7 +13,6 @@ import "./shop.scss";
 
 const Shop = () => {
   const [value, setValue] = React.useState([2, 10]);
-
   const { categories } = useSelector((state) => state.category);
   const { brands } = useSelector((state) => state.brand);
   const { products } = useSelector((state) => state.products);
@@ -72,7 +70,7 @@ const Shop = () => {
         <div className="box">
           <div className="image">
             <div className="d-flex">
-              <Link to="/" style={{ textDecoration: "none" }}>
+              <Link to="/" style={{ textDecoration: "none",color:"black"}}>
                 <p style={{ cursor: "pointer" }}>Home / </p>
               </Link>
               <p style={{ marginLeft: "10px" }}>Shop</p>
@@ -108,12 +106,10 @@ const Shop = () => {
                 <h4>BRANDS</h4>
                 {brands &&
                   brands.map((brand) => (
-                    <div className="smallBox d-flex  justify-content-center">
-                      <div className="col-lg-8">
-                        <Link to={'/brand/' + brand.id} style={{textDecoration:"none",color:"black"}}>
-                          <p>{brand.name}</p>
-                        </Link>
-                      </div>
+                    <div key={brand.id}>
+                      <Link to={'/brand/' + brand.id} style={{textDecoration:"none",color:"black"}}>
+                        <p>{brand.name}</p>
+                      </Link>
                     </div>
                   ))}
               </div>
@@ -125,7 +121,7 @@ const Shop = () => {
                     width: "fit-content",
                   }}
                 >
-                  <h3>Shop by Price</h3>
+                  <h4>Shop by Price</h4>
                   <Typography id="range-slider" gutterBottom></Typography>
                   <Slider
                     value={value}
@@ -135,11 +131,6 @@ const Shop = () => {
                   Your range of Price is between £ {value[0]} - £ {value[1]}
                 </div>
                 <button>Filter</button>
-              </div>
-              <div className="box3">
-                <h4>PRODUCT STATUS</h4>
-                <p>In Stock</p>
-                <p>On Sale</p>
               </div>
             </div>
             <div className="col-lg-9 bottom1">

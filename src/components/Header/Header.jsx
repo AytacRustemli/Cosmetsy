@@ -42,13 +42,15 @@ const Header = () => {
             <div className="d-flex align-items-center">
               <div className="left">
                 <div className="d-flex align-items-center">
-                  <div className="image">
-                    <img
-                      width="168px"
-                      src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/logo-dark.png"
-                      alt=""
-                    />
-                  </div>
+                  <Link to='/'>
+                    <div className="image">
+                      <img
+                        width="168px"
+                        src="https://klbtheme.com/cosmetsy/wp-content/uploads/2021/02/logo-dark.png"
+                        alt=""
+                      />
+                    </div>
+                  </Link>
                 </div>
               </div>
               <div className="right">

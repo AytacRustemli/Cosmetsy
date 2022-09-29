@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 import '../Popular/popular.scss'
 import { getCategoryAction } from './../../redux/Actions/CategoryActions';
 
@@ -26,6 +27,7 @@ const Popular = () => {
                             categories &&
                             categories.map((cat) => (
                                 <div className="col-lg-3 my-4" key={cat.id}>
+                                    <Link to={'/category/' + cat.id}>
                                     <div className="box">
                                         <div className="image">
                                             <img src={cat.photoURL} alt="" />
@@ -35,6 +37,7 @@ const Popular = () => {
                                             <span>SHOP NOW</span>
                                         </div>
                                     </div>
+                                    </Link>
                                 </div>
                             ))
                         }

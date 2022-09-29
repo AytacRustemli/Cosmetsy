@@ -16,13 +16,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function Product() {
-    // const notify = (productName) => toast(`${productName} sebete elave olundu.`)
     const { products } = useSelector((state) => state.products)
     const  {cartItems}  = useSelector((state) => state.cart)
     const  {favoriesItems}  = useSelector((state) => state.favories)
     const dispatch = useDispatch();
-
-    
     const notify = () => toast(<Link to="/cart" style={{textDecoration: "none"}}>"Product added to cart !"</Link>);
     const notifyF = () => toast(<Link to="/wishlist" style={{textDecoration: "none"}}>"Product added to wishlist !"</Link>);
 
@@ -56,10 +53,12 @@ function Product() {
                 <div className="top">
                     <div className="d-flex justify-content-between">
                         <h2>Best Seller Products</h2>
-                        <div className="text d-flex">
-                            <span>View All Products</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                        <Link to='/shop' style={{textDecoration : "none",color:"black"}}>
+                            <div className="text d-flex">
+                                <span>View All Products</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </Link>
                     </div>
                 </div>
                 <div className="bottom">

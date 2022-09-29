@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../SkinCare/skincare.scss'
 
 const SkinCare = () => {
@@ -19,9 +20,11 @@ const SkinCare = () => {
                             <p className='skincare'>Balance, purify, and heal your skin with Monastery.<br />
                             Ingredients of the highest quality.
                             </p>
-                            <div className="denemee">
-                                <span className='shop'>SHOP NOW</span>
-                            </div>
+                            <Link to='/shop' style={{textDecoration:"none"}}>
+                                <div className="denemee">
+                                    <span className='shop'>SHOP NOW</span>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -20,10 +20,12 @@ const Latest = () => {
                 <div className="top">
                     <div className="d-flex justify-content-between">
                         <h2>Latest News</h2>
-                        <div className="text d-flex">
-                            <span>View All Posts</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                        <Link to='/blog' style={{textDecoration:"none",color:"black"}}>
+                            <div className="text d-flex">
+                                <span>View All Posts</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </Link>
                     </div>
                 </div>
                 <div className="bottom">
@@ -38,14 +40,16 @@ const Latest = () => {
                                                 <img src={blog.picture} alt="" />
                                             </div>
                                         </Link>
-                                        <div className="text">
-                                            <div className="d-flex">
-                                                <span className="box1 date">7 FEB 2021</span>
-                                                <span className="box1 title">{blog.style}</span>
+                                        <Link to={'/blogdetail/' + blog.id} style={{textDecoration:"none"}}>
+                                            <div className="text">
+                                                <div className="d-flex">
+                                                    <span className="box1 date">7 FEB 2021</span>
+                                                    <span className="box1 title">{blog.style}</span>
+                                                </div>
+                                                <span className='box1 super'>{blog.name}</span>
+                                                <span className='box1 number'><i className='i'>By</i>Sinan</span>
                                             </div>
-                                            <span className='box1 super'>{blog.name}</span>
-                                            <span className='box1 number'><i className='i'>By</i>Sinan</span>
-                                        </div>
+                                        </Link>
                                     </div>
                                 </div>
                             ))

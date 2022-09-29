@@ -68,7 +68,9 @@ const CategoryDetail = () => {
         <div className="box">
           <div className="image">
             <div className="d-flex">
-              <p style={{ cursor: "pointer" }}>Category : </p>
+              <Link to='/categories' style={{textDecoration:"none"}}>
+                <p style={{ cursor: "pointer" }}>Category:</p>
+              </Link>
               <p style={{ marginLeft: "10px" }}>{category.name}</p>
             </div>
           </div>
@@ -90,7 +92,7 @@ const CategoryDetail = () => {
               products
                 .filter((x) => x.categoryName == category.name)
                 .map((product) => (
-                  <div className="col-lg-4" key={product.id}>
+                  <div className="col-lg-3" key={product.id}>
                     <div className="box">
                       <div className="image">
                         <Link to={"/product/" + product.id}>

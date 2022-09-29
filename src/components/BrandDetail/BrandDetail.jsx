@@ -68,7 +68,7 @@ const BrandDetail = () => {
         <div className="box">
           <div className="image">
             <div className="d-flex">
-              <p style={{ cursor: "pointer" }}>Brand : </p>
+              <p style={{ cursor: "pointer" }}>Brand:</p>
               <p style={{ marginLeft: "10px" }}>{brand.name}</p>
             </div>
           </div>
@@ -90,7 +90,7 @@ const BrandDetail = () => {
               products
                 .filter((x) => x.brandName == brand.name)
                 .map((product) => (
-                  <div className="col-lg-4" key={product.id}>
+                  <div className="col-lg-3" key={product.id}>
                     <div className="box">
                       <div className="image">
                         <Link to={"/product/" + product.id}>

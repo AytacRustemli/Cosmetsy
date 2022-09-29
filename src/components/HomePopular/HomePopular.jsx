@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './homePopular.scss'
 import { getCategoryAction } from './../../redux/Actions/CategoryActions';
+import { Link } from 'react-router-dom';
 
 const HomePopular = () => {
     const { categories } = useSelector((state) => state.category)
@@ -26,6 +27,7 @@ const HomePopular = () => {
                             categories &&
                             categories.filter(x=>x.isPopular).map((cat) => (
                                 <div className="col-lg-3 my-2" key={cat.id}>
+                                    <Link to={'/category/' + cat.id}>
                                     <div className="box">
                                         <div className="image">
                                             <img src={cat.photoURL} alt="" />
@@ -35,6 +37,7 @@ const HomePopular = () => {
                                             <span>SHOP NOW</span>
                                         </div>
                                     </div>
+                                    </Link>
                                 </div>
                             ))
                         }
