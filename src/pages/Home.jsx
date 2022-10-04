@@ -15,12 +15,12 @@ const Home = () => {
       <Botanical />
       <Product />
       <Davines />
-      <SkinCare />
+      {/* <SkinCare />
       <Featured />
       <Cream />
       <CountDown />
       <Latest />
-      <HomePopular />
+      <HomePopular /> */}
     </div>
   )
 }
