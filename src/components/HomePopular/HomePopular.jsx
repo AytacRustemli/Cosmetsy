@@ -15,7 +15,7 @@ const HomePopular = () => {
 
   return (
     <div>
-        <section id="popular">
+        <section id="homepopular">
             <div className="container">
                 <div className="top">
                     <h2>Popular Categories</h2>
@@ -26,7 +26,7 @@ const HomePopular = () => {
                         {
                             categories &&
                             categories.filter(x=>x.isPopular).map((cat) => (
-                                <div className="col-lg-3 my-2" key={cat.id}>
+                                <div className="col-lg-3 col-6 my-2" key={cat.id}>
                                     <Link to={'/category/' + cat.id}>
                                     <div className="box">
                                         <div className="image">

@@ -8,7 +8,7 @@ const Cream = () => {
       <section id="cream">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-12">
               <Link to='/product/1034' style={{textDecoration : "none", color:"black"}}>
                 <div className="box">
                   <div className="image">
@@ -23,7 +23,7 @@ const Cream = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-12">
               <Link to='/product/1035' style={{textDecoration : "none", color:"black"}}>
                 <div className="box">
                   <div className="image">

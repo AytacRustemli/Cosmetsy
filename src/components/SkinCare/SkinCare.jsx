@@ -8,12 +8,12 @@ const SkinCare = () => {
         <section id="skincare">
             <div className="container">
                 <div className="row deneme">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-12">
                         <div className="image">
                             <img src="https://klbtheme.com/cosmetsy/wp-content/plugins/cosmetsy-core/elementor/images/image-text6.jpg" alt="" />
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-12">
                         <div className="text">
                             <h6>Botanical Skincare</h6>
                             <h5>Skincare made with <br /> the world’s finest</h5>

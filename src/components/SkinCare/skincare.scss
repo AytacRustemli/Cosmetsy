@@ -61,3 +61,45 @@
     }
     
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+    #skincare{
+        padding: 0px;
+        .deneme{
+            .text{
+                padding-bottom: 28px;
+                margin-top: 20px;
+                h5{
+                    font-size: 27px;
+                    color: black;
+                    margin-bottom: 0px;
+                    margin-top: 0px;
+                }
+                .skincare{
+                    font-size: 16px;
+                    margin-bottom: 0px;
+                    margin-top: 10px;
+                }
+                .denemee{
+                    margin-top: 20px;
+                }
+                
+            }
+        }
+        
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+    
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}
