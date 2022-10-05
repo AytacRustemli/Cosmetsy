@@ -44,7 +44,7 @@ const Login = () => {
             <p>Password *</p>
             <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" onChange={(e) => setPassword(e.target.value)} /> <br />
             <button onClick={() => loginHandler()}>LOG IN</button> <br />
-            <p className='p'>Lost your password?</p>
+            {/* <p className='p'>Lost your password?</p> */}
         </section>
     </div>
   )

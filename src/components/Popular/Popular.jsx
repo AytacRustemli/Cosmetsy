@@ -26,7 +26,7 @@ const Popular = () => {
                         {
                             categories &&
                             categories.map((cat) => (
-                                <div className="col-lg-3 my-4" key={cat.id}>
+                                <div className="col-lg-3 my-4 col-6" key={cat.id}>
                                     <Link to={'/category/' + cat.id}>
                                     <div className="box">
                                         <div className="image">

@@ -79,10 +79,10 @@ const Duis = () => {
                       className="d-flex"
                       style={{ marginTop: "10px" }}
                     >
-                      <div className="image">
+                      <div className="imagee">
                         <img src={blog.picture} alt="" />
                       </div>
-                      <div className="text">
+                      <div className="textt">
                         <Link
                           to={"/blogdetail/" + blog.id} target={"_blank"}
                           style={{ textDecoration: "none", color: "black" }}

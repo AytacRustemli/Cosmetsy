@@ -15,7 +15,7 @@ const BillingDetails = () => {
               <input type="text" placeholder="Your phone" /> <br />
               <input type="text" placeholder="Address" />
             </div>
-            <div className="col-lg-5">
+            <div className="col-lg-5 col-12">
               <div className="cart_totals">
                 <h3>YOUR ORDER</h3>
                 <table>

@@ -149,9 +149,7 @@ const CartTotal = () => {
                             </tbody>
                         </table>
                         <div className="deneme">
-                            
-                            <span className='shop' onClick={() => addOrder()}>Proceed to checkout</span>
-                            
+                          <span className='shop' onClick={() => addOrder()}>Proceed to checkout</span>
                         </div>
                     </div>
                 </div>

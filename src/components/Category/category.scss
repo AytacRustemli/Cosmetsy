@@ -18,9 +18,9 @@
     }
     .image{
         img{
-            height: 229px;
+            // height: 229px;
             width: 100%;
-            margin-left: 3px;
+            // margin-left: 3px;
             transition: 0.3s ease-in-out;
             cursor: pointer;
             &:hover{
@@ -84,3 +84,36 @@
         }
     }
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {  
+    #category{
+        .image{
+         img{
+            margin-top: 10px;
+         }
+        }
+    }
+    #subscribe{
+        .text1{
+            .email{
+                width: 100%;
+            }
+        }
+    }
+      
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+    
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}

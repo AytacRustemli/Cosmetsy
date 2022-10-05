@@ -29,3 +29,38 @@
         }
     }
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    #from{
+        .text{
+            left: 0%;
+            h6{
+                text-align: center;
+            }
+            h3{
+                font-size: 30px;
+                margin-left: 40px;
+                margin-bottom: 0px;
+                margin-top: 40px;
+                text-align: center;
+                width: 80%;
+            }
+        }
+    }   
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+    
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}
