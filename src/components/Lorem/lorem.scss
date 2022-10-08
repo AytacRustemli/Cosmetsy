@@ -71,12 +71,56 @@
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-
+    #lorem{
+        margin-bottom: 0px;
+        .box{
+            padding-top: 60px;
+            height: 0px;
+            text-align: center;
+            .image{
+                width: 25%;
+                margin: auto;
+            }
+            .bottom{
+                width: 70%;
+                margin: auto;
+                h1{
+                    color: white;
+                    font-size: 40px;
+                }
+                p{
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-    
+    #lorem{
+        margin-bottom: 0px;
+        .box{
+            padding-top: 60px;
+            height: 0px;
+            text-align: center;
+            .image{
+                width: 20%;
+                margin: auto;
+            }
+            .bottom{
+                width: 70%;
+                margin: auto;
+                h1{
+                    color: white;
+                    font-size: 40px;
+                }
+                p{
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)

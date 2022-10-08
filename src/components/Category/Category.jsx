@@ -13,37 +13,37 @@ const Category = () => {
           </div>
           <div className="image">
             <div className="row">
-              <div className="col-lg-2 col-12">
+              <div className="col-lg-2 col-12 col-sm-6">
                 <img
                   src="https://klbtheme.com/cosmetsy/wp-content/uploads/sb-instagram-feed-images/146690167_1092778534480791_2508292805730707430_nlow.jpg"
                   alt=""
                 />
               </div>
-              <div className="col-lg-2 col-12">
+              <div className="col-lg-2 col-12 col-sm-6">
                 <img
                   src="https://klbtheme.com/cosmetsy/wp-content/uploads/sb-instagram-feed-images/147060049_247152490414118_8953246016809088426_nlow.jpg"
                   alt=""
                 />
               </div>
-              <div className="col-lg-2 col-12">
+              <div className="col-lg-2 col-12 col-sm-6">
                 <img
                   src="https://klbtheme.com/cosmetsy/wp-content/uploads/sb-instagram-feed-images/147032792_1160031771118015_4117443447417177135_nlow.jpg"
                   alt=""
                 />
               </div>
-              <div className="col-lg-2 col-12">
+              <div className="col-lg-2 col-12 col-sm-6">
                 <img
                   src="https://klbtheme.com/cosmetsy/wp-content/uploads/sb-instagram-feed-images/146338993_428448751697366_7960391196911720399_nlow.jpg"
                   alt=""
                 />
               </div>
-              <div className="col-lg-2 col-12">
+              <div className="col-lg-2 col-12 col-sm-6">
                 <img
                   src="https://klbtheme.com/cosmetsy/wp-content/uploads/sb-instagram-feed-images/146741984_779599999327218_7460124086517987336_nlow.jpg"
                   alt=""
                 />
               </div>
-              <div className="col-lg-2 col-12">
+              <div className="col-lg-2 col-12 col-sm-6">
                 <img
                   src="https://k4j3j2s7.rocketcdn.me/cosmetsy/wp-content/uploads/2021/02/index-22.jpg"
                   alt=""

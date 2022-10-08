@@ -58,12 +58,26 @@
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-
+    #contact{
+        .box{
+            padding-top: 0px;
+            .image{
+                width: 20%;
+            }
+        }
+    }  
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-    
+    #contact{
+        .box{
+            padding-top: 0px;
+            .image{
+                width: 20%;
+            }
+        }
+    } 
 }
 
 // Extra large devices (large desktops, 1200px and up)

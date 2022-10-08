@@ -95,9 +95,9 @@ const CartTotal = () => {
                   <tr>
                     <th>PICTURE</th>
                     <th>PRODUCT</th>
-                    <th>PRICE</th>
+                    <th className="product">PRICE</th>
                     <th>QUANTITY</th>
-                    <th>SUBTOTAL</th>
+                    <th className="product">SUBTOTAL</th>
                     <th>REMOVE</th>
                   </tr>
                 </thead>
@@ -112,9 +112,9 @@ const CartTotal = () => {
                         />
                       </td>
                       <td>{product.name}</td>
-                      <td>{product.price} £</td>
+                      <td className="product">{product.price} £</td>
                       <td>{product.quantity}</td>
-                      <td>{product.price * product.quantity} £</td>
+                      <td className="product">{product.price * product.quantity} £</td>
                       <td>
                         <i class="fa-solid fa-x"></i>
                       </td>

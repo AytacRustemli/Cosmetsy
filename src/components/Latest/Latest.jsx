@@ -33,7 +33,7 @@ const Latest = () => {
                         {
                             blogs &&
                             blogs.map((blog) =>(
-                                <div className="col-lg-4">
+                                <div className="col-lg-4 col-sm-6">
                                     <div className="box">
                                         <Link to={'/blogdetail/' + blog.id}>
                                             <div className="image">

@@ -6,7 +6,7 @@ const Fill = () => {
     <div id='fill'>
       <div className="container">
         <div className=" row">
-          <div className="col-lg-8 col-12 bottom">
+          <div className="col-lg-8 col-12 col-md-12 bottom">
             <h2>Contact Us for Cosmetsy</h2>
             <input type="text" placeholder='Your name'/> <br />
             <input type="text" placeholder='Your email' /> <br />

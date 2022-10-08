@@ -9,10 +9,10 @@ const Auth = () => {
       <Account />
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-sm-6">
             <Login />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-sm-6">
             <Register />
           </div>
         </div>

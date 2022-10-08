@@ -129,3 +129,58 @@
     }
   }
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  #categorydetail {
+    .top {
+      .box {
+        padding-top: 70px;
+        .image {
+          width: 40%;
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+  #categorydetail {
+    .top {
+      .box {
+        padding-top: 70px;
+        .image {
+          width: 20%;
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+  #categorydetail {
+    .top {
+      .box {
+        padding-top: 70px;
+        .image {
+          width: 20%;
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}

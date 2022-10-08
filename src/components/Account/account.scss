@@ -43,12 +43,40 @@
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-
+    #account{
+        .box{
+            padding-top: 0px;
+            .image{
+                width: 27%;
+                margin: auto;
+                p{
+                    margin-top: 20px;
+                }
+            }
+            .bottom{
+                margin-top: 40px;
+            }
+        }
+    } 
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-    
+    #account{
+        .box{
+            padding-top: 0px;
+            .image{
+                width: 27%;
+                margin: auto;
+                p{
+                    margin-top: 20px;
+                }
+            }
+            .bottom{
+                margin-top: 40px;
+            }
+        }
+    } 
 }
 
 // Extra large devices (large desktops, 1200px and up)

@@ -58,8 +58,8 @@ const WishlistTotal = () => {
                   <tr>
                     <th>PICTURE</th>
                     <th>PRODUCT</th>
-                    <th>PRICE</th>
-                    <th>ADD TO CART</th>
+                    <th className="price">PRICE</th>
+                    <th className="price">ADD TO CART</th>
                     <th>REMOVE</th>
                   </tr>
                 </thead>
@@ -71,8 +71,8 @@ const WishlistTotal = () => {
                           <img src={`${FILE_PATH}${product.img}`} alt="" />
                         </td>
                         <td>{product.name}</td>
-                        <td>{product.price} £</td>
-                        <td>
+                        <td className="price">{product.price} £</td>
+                        <td className="price">
                           <div className="deneme" style={{marginTop :"0px"}}>
                             <span className="shop" onClick={() =>addToCartHadler(product.id, product.name)}>ADD TO CART</span>
                           </div>

@@ -54,12 +54,46 @@
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-
+    #proin{
+        .deneme{
+            position: relative;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            .box{
+                padding: 10px 0px 0px 10px;
+                .p{
+                    width: 100%;
+                }
+                h4{
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-    
+    #proin{
+        .deneme{
+            position: relative;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            .box{
+                padding: 10px 0px 0px 10px;
+                .p{
+                    width: 100%;
+                }
+                h4{
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)

@@ -54,12 +54,49 @@
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-
+    #from{
+        .image{
+            img{
+                height: 200px;
+            }
+        }
+        .text{
+            left: 0%;
+            text-align: center;
+            h3{
+                font-size: 40px;
+                color: white;
+                margin-bottom: 0px;
+                margin-top: 20px;
+                width: 100%;
+                font-family: "DM Sans", sans-serif;
+            }
+        }
+    }
+    
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-    
+    #from{
+        .image{
+            img{
+                height: 200px;
+            }
+        }
+        .text{
+            left: 0%;
+            text-align: center;
+            h3{
+                font-size: 40px;
+                color: white;
+                margin-bottom: 0px;
+                margin-top: 20px;
+                width: 100%;
+                font-family: "DM Sans", sans-serif;
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)

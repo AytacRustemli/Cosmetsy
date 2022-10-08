@@ -28,12 +28,6 @@ const Duis = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-3">
-              <div className="box">
-                <button>
-                  <input placeholder="Search..." type="text" name="" id="" />
-                  <i className="fas fa-search"></i>
-                </button>
-              </div>
               <div className="boxes1">
                 <h4>SOCIAL MEDIA</h4>
                 <div className="box1">

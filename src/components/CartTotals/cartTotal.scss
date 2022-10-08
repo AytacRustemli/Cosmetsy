@@ -139,17 +139,68 @@
                 }
             }
         }
+        .box{
+            table{
+                thead{
+                    tr{
+                        .product{
+                            display: none;
+                        }
+                        
+                    }
+                }
+                tbody{
+                    tr{
+                        .product{
+                            display: none;
+                        }
+                        
+                    }
+                }
+            }
+        }
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-
+    #cartTotal{
+        padding-bottom: 0px;
+        .collaterals{
+            margin-left: 0px;
+            padding: 2rem;
+            .cart_totals{
+                .deneme{
+                    margin-top: 20px;
+                    .shop{
+                        padding-left: 15.5rem;
+                        padding-right: 15.5rem;
+                    }
+                }
+            }
+        }
+        
+    }
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-    
+    #cartTotal{
+        padding-bottom: 0px;
+        .collaterals{
+            margin-left: 0px;
+            padding: 2rem;
+            .cart_totals{
+                .deneme{
+                    margin-top: 20px;
+                    .shop{
+                        padding-left: 15.5rem;
+                        padding-right: 15.5rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)

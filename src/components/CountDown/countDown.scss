@@ -66,12 +66,40 @@
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-
+    #countdown{
+        margin-top: 20px;
+        .timer-container{
+            .timer{
+                display: contents;
+                &:first-child{
+                    width: 100%;
+                }
+                .dene{
+                    width: 50%;
+                    margin: auto;
+                }
+            }
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-    
+    #countdown{
+        margin-top: 20px;
+        .timer-container{
+            .timer{
+                display: contents;
+                &:first-child{
+                    width: 100%;
+                }
+                .dene{
+                    width: 50%;
+                    margin: auto;
+                }
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)

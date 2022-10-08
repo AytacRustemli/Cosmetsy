@@ -307,12 +307,58 @@
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-
+    #social{
+        margin-top: 20px;
+        .image{
+            margin-left: 0px;
+        }
+        .text{
+            margin-left: 0px;
+            h2{
+                font-size: 20px;
+            }
+        }
+        .box{
+            display: none;
+        }
+        .boxes1{
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+        .boxes4{
+            .text{
+                margin-left: 10px;
+            }
+        }
+    } 
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-    
+    #social{
+        margin-top: 20px;
+        .image{
+            margin-left: 0px;
+        }
+        .text{
+            margin-left: 0px;
+            h2{
+                font-size: 20px;
+            }
+        }
+        .box{
+            display: none;
+        }
+        .boxes1{
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+        .boxes4{
+            .text{
+                margin-left: 10px;
+            }
+        }
+    } 
 }
 
 // Extra large devices (large desktops, 1200px and up)
