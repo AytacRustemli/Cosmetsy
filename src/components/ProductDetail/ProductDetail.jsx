@@ -199,12 +199,22 @@ const ProductDetail = () => {
               <ul>
                 <li>
                   <div className="d-flex">
-                    <span>
-                      <del>{product.salePrice}</del>
-                    </span>
-                    <span style={{ marginLeft: "10px" }}>
-                      £ {product.price}
-                    </span>
+                    {
+                      product.isStock == true ? (
+                        <span>
+                          £ {product.price}
+                        </span>
+                      ) : (
+                        <>
+                          <span>
+                            <del>£ {product.price}</del>
+                          </span>
+                          <span style={{ marginLeft: "10px" }}>
+                            £ {product.salePrice}
+                          </span>
+                        </>
+                      )
+                    }
                     {product.isStock == true ? (
                       <div className="stock">
                         <p>In Stock</p>

@@ -1,6 +1,7 @@
-import { Slider, Typography } from "@mui/material";
+import { Pagination, Slider, Stack, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { usePagination } from '@mui/material/Pagination';
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { FILE_PATH } from "../../api/config";
@@ -188,6 +189,9 @@ const Shop = () => {
                       </div>
                     ))}
                 </div>
+                <Stack spacing={5}>
+                  <Pagination count={3} color="secondary" />
+                </Stack>
               </div>
             </div>
           </div>
