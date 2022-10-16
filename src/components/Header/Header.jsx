@@ -11,13 +11,13 @@ const Header = () => {
   const { userInfo } = useSelector((state) => state.user);
   const { cartItems } = useSelector((state) => state.cart);
   const [totalPrice, setTotalPrice] = useState(0);
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const logOut = () =>{
-    dispatch(logoutUserAction())
-    navigate("/")
-  }
+  const logOut = () => {
+    dispatch(logoutUserAction());
+    navigate("/");
+  };
 
   const countTotal = () => {
     var price = 0;
@@ -26,7 +26,6 @@ const Header = () => {
     });
     setTotalPrice(price);
   };
-  
 
   useEffect(() => {
     countTotal();
@@ -42,7 +41,7 @@ const Header = () => {
             <div className="d-flex align-items-center">
               <div className="left">
                 <div className="d-flex align-items-center">
-                  <Link to='/'>
+                  <Link to="/">
                     <div className="image">
                       <img
                         width="168px"
@@ -76,18 +75,29 @@ const Header = () => {
                     </Link>
                   </ul>
                   <div className="icons d-flex">
-                    {
-                      userInfo.length === 0 ? (
-                        <Link to='/account' style={{ textDecoration: "none" , marginTop : "-4px", color:"black"}}>
-                          <i class="fa-solid fa-user"></i>
-                        </Link>
-                      ) : 
-                      (
-                        <Link to='/finish' style={{ textDecoration: "none" , marginTop : "-4px", color:"black"}}>
-                          <i class="fa-solid fa-user"></i>
-                        </Link>
-                      )
-                    }
+                    {userInfo.length === 0 ? (
+                      <Link
+                        to="/account"
+                        style={{
+                          textDecoration: "none",
+                          marginTop: "-4px",
+                          color: "black",
+                        }}
+                      >
+                        <i class="fa-solid fa-user"></i>
+                      </Link>
+                    ) : (
+                      <Link
+                        to="/finish"
+                        style={{
+                          textDecoration: "none",
+                          marginTop: "-4px",
+                          color: "black",
+                        }}
+                      >
+                        <i class="fa-solid fa-user"></i>
+                      </Link>
+                    )}
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <div className="cart">
                       <i class="fa-solid fa-bag-shopping"></i>
@@ -98,38 +108,49 @@ const Header = () => {
                         <hr />
                         <div className="center">
                           <div className="row">
-                            {
-                              cartItems.length > 0 
-                              ? cartItems.map((product) => (
+                            {cartItems.length > 0 ? (
+                              cartItems.map((product) => (
                                 <>
                                   <div className="col-lg-4 my-2">
-                              <img
-                                width="100%"
-                                src={`${FILE_PATH}${product.img}`}
-                                alt=""
-                              />
-                            </div>
-                            <div className="col-lg-8 my-2">
-                              <div className="row align-items-center justify-content-between">
-                                <div className="col-lg-10">
-                                  <h6 className="samsung">
-                                    {product.name}
-                                  </h6>
-                                  <div className="d-flex justify-content-between">
-                                    <p className="price">{product.price} £</p>
-                                    <p>Quantity : {product.quantity}</p>
+                                    <img
+                                      width="100%"
+                                      src={`${FILE_PATH}${product.img}`}
+                                      alt=""
+                                    />
                                   </div>
-                                  
-                                </div>
-                                <div className="col-lg-2">
-                                  <i class="fa-solid fa-x"></i>
-                                </div>
-                              </div>
-                            </div>
+                                  <div className="col-lg-8 my-2">
+                                    <div className="row align-items-center justify-content-between">
+                                      <div className="col-lg-10">
+                                        <h6 className="samsung">
+                                          {product.name}
+                                        </h6>
+                                        <div className="d-flex justify-content-between">
+                                          <p className="price">
+                                            {product.price} £
+                                          </p>
+                                          <p>Quantity : {product.quantity}</p>
+                                        </div>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <i class="fa-solid fa-x"></i>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </>
-                              )) : ("bosdur sebet")
-                            }
-                            
+                              ))
+                            ) : (
+                              <>
+                                <div className="boxess">
+                                  <div className="buttonDiv">
+                                    <button className="vieww">
+                                      <Link to="/">
+                                        No products in the cart.
+                                      </Link>
+                                    </button>
+                                  </div>
+                                </div>
+                              </>
+                            )}
                           </div>
                         </div>
                         <hr />

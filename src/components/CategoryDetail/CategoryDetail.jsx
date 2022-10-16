@@ -92,7 +92,7 @@ const CategoryDetail = () => {
               products
                 .filter((x) => x.categoryName == category.name)
                 .map((product) => (
-                  <div className="col-lg-3 col-md-4" key={product.id}>
+                  <div className="col-lg-3 col-6 col-md-4" key={product.id}>
                     <div className="box">
                       <div className="image">
                         <Link to={"/product/" + product.id}>

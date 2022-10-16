@@ -245,7 +245,7 @@ const ProductDetail = () => {
                 SKU: <span>{product.sku}</span>
               </p>
               <p class="tagged_as">
-                Brand: <span>{product.brand}</span>
+                Brand: <span>{product.brandName}</span>
               </p>
             </div>{" "}
             <hr />

@@ -70,7 +70,7 @@ const Shop = () => {
         <div className="box">
           <div className="image">
             <div className="d-flex">
-              <Link to="/" style={{ textDecoration: "none",color:"black"}}>
+              <Link to="/" style={{ textDecoration: "none",color:"white"}}>
                 <p style={{ cursor: "pointer" }}>Home / </p>
               </Link>
               <p style={{ marginLeft: "10px" }}>Shop</p>
@@ -116,9 +116,9 @@ const Shop = () => {
               <div className="box2">
                 <div
                   style={{
-                    margin: "auto",
+                    // margin: "auto",
                     // display: 'block',
-                    width: "fit-content",
+                    // width: "fit-content",
                   }}
                 >
                   <h4>Shop by Price</h4>
@@ -138,7 +138,7 @@ const Shop = () => {
                 <div className="row">
                   {products &&
                     products.map((product) => (
-                      <div className="col-lg-4" key={product.id}>
+                      <div className="col-lg-4 col-6" key={product.id}>
                         <div className="box">
                           <div className="image">
                             <Link to={"/product/" + product.id}>

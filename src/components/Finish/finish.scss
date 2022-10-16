@@ -5,7 +5,7 @@
         button {
             background-color: #ffcc95;
             color: black;
-            padding: 10px 185px;
+            padding: 10px 200px;
             border-radius: 35px;
             margin-top: 10px;
             font-weight: bold;
@@ -24,3 +24,42 @@
     
     }
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {    
+    #accoutPage{
+        padding: 10px;
+        .buttonBox {
+            button {
+                padding: 10px 100px;
+            }
+        
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media(min-width: 576px) and (max-width: 768px) {
+    #accoutPage{
+        .buttonBox {
+            button {
+                padding: 10px 264px;
+            }
+        
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media(min-width: 768px) and (max-width: 992px) {
+    #accoutPage{
+        .buttonBox {
+            button {
+                padding: 10px 264px;
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {}
