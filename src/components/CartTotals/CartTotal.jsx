@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./cartTotal.scss";
 import { CheckOutAction } from './../../redux/Actions/CheckOutAction';
-import { removeAllCartAction } from './../../redux/Actions/CartAction';
+import { removeAllCartAction, removeFromFavories } from './../../redux/Actions/CartAction';
 import { getUserAction } from './../../redux/Actions/UserAction';
 import { FILE_PATH } from "../../api/config";
 
@@ -79,6 +79,10 @@ const CartTotal = () => {
     }
   };
 
+  const removeFromFavoriesHandler = (id) => {
+    dispach(removeFromFavories(id));
+  };
+
   useEffect(() => {
     countTotal();
     dispach(getUserAction());
@@ -116,7 +120,9 @@ const CartTotal = () => {
                       <td>{product.quantity}</td>
                       <td className="product">{product.price * product.quantity} £</td>
                       <td>
-                        <i class="fa-solid fa-x"></i>
+                        <i class="fa-solid fa-x" onClick={() =>
+                              removeFromFavoriesHandler(product.product)
+                            }></i>
                       </td>
                     </tr>
                     ))
@@ -124,7 +130,9 @@ const CartTotal = () => {
                     <>
                       <p>Your cart is currently empty.</p>
                       <div className="deneme">
-                        <span className="shop">RETURN TO SHOP</span>
+                        <span className="shop">
+                        <Link to='/shop' style={{textDecoration : "none",color: "black"}}>RETURN TO SHOP</Link>
+                        </span>
                       </div>
                     </>
                   )}

@@ -189,9 +189,6 @@ const Shop = () => {
                       </div>
                     ))}
                 </div>
-                <Stack spacing={5}>
-                  <Pagination count={3} color="secondary" />
-                </Stack>
               </div>
             </div>
           </div>

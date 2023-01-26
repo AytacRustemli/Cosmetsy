@@ -10,7 +10,7 @@ const CountDown = () => {
     let interval = useRef();
 
     const startTimer = () =>{
-        const countdownDate = new Date('November 28, 2022 00:00:00').getTime();
+        const countdownDate = new Date('February 14, 2023 00:00:00').getTime();
         interval = setInterval(() =>{
             const now = new Date().getTime();
             const distance = countdownDate - now;

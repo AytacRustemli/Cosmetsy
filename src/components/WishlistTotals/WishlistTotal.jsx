@@ -91,7 +91,9 @@ const WishlistTotal = () => {
                     <>
                       <p>Wishlist is currently empty.</p>
                       <div className="deneme">
-                        <span className="shop">RETURN TO SHOP</span>
+                        <span className="shop">
+                          <Link to='/shop' style={{textDecoration : "none",color: "black"}}>RETURN TO SHOP</Link>
+                        </span>
                       </div>
                     </>
                   )}

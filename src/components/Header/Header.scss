@@ -218,22 +218,106 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
-  #header{
-    display: none;
+  #header {
+    .bm-burger-button {
+      position: absolute;
+      width: 22px;
+      height: 18px;
+      left: 20px;
+      top: 28px;
+    }
+    #navbar {
+      padding: 20px;
+      .left {
+        .image {
+          margin-left: 60px;
+        }
+      }
+      .right {
+          .main {
+            li {
+              display: none;
+            }
+          }
+          .icons {
+            margin-top: 2px;
+          }
+      }
+      
+    }
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media(min-width: 576px) and (max-width: 768px) {
-  #header{
-    display: none;
+  #header {
+    .bm-burger-button {
+      position: absolute;
+      width: 22px;
+      height: 18px;
+      left: 20px;
+      top: 44px;
+    }
+    #navbar {
+      padding: 20px;
+      .left {
+        .image {
+          margin-left: 20px;
+        }
+      }
+      .right {
+        margin: auto;
+        .main {
+          margin-top: 10px;
+          margin-right: 10px;
+          li {
+            margin-left: 20px;
+            
+          }
+        }
+        .icons {
+          margin: auto;
+          margin-top: 30px;
+        }
+      }
+    }
   }
+  
 }
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 768px) and (max-width: 992px) {
-  #header{
-    display: none;
+  #header {
+    .bm-burger-button {
+      position: absolute;
+      width: 22px;
+      height: 18px;
+      left: 20px;
+      top: 44px;
+    }
+    #navbar {
+      padding: 20px;
+      .left {
+        .image {
+          margin-left: 20px;
+        }
+      }
+      .right {
+        margin: auto;
+        .main {
+          margin-top: 10px;
+          margin-right: 10px;
+          li {
+            margin-left: 20px;
+            
+          }
+        }
+        .icons {
+          margin: auto;
+          margin-top: 30px;
+        }
+      }
+    }
   }
 }
 

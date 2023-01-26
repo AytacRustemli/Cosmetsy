@@ -47,7 +47,7 @@ const Fill = () => {
           <div className="col-lg-8 col-12 col-md-12 bottom">
             <h2>Contact Us for Cosmetsy</h2>
             <input type="text" placeholder='Your name' onChange={(e) => setName(e.target.value)}/> <br />
-            <input type="text" placeholder='Your email' onChange={(e) => setEmail(e.target.value)}/> <br />
+            <input type="email" placeholder='Your email' onChange={(e) => setEmail(e.target.value)}/> <br />
             <input type="text" placeholder='Your phone' onChange={(e) => setPhone(e.target.value)}/> <br />
             <input type="text" placeholder='Message' onChange={(e) => setMessage(e.target.value)}/>
 
